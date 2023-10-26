@@ -1,0 +1,21 @@
+---
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    build:
+      commands:
+        - echo Build started on 'date'
+        - echo Compiling the Python code....
+        - pip install request -t .
+    post_buid:
+      commands:
+        - echo Build completed on 'date'
+        - pwd
+        - ls -al
+artifacts:
+  files:
+    - "**/*"
+    #changes
+    
